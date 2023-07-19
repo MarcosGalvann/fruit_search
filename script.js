@@ -14,23 +14,20 @@ function search(str) {
 };
 
 function searchHandler(e) {
-	e.preventDefault();
-	input.value=''
-
-}
+	// TODO
+};
 
 function showSuggestions(results, ...inputVal) {
 
+};
+
+function useSuggestion(e) {
 	// TODO
-}
-
-suggestions.addEventListener('click', useSuggestion); {
-	useSuggestion.preventDefault();
-	if (useSuggestion.target.tagName === 'LI') {
-		input.value='';
-		
-
-	}
-}
+};
 
 input.addEventListener('keyup', searchHandler);
+suggestions.addEventListener('click', useSuggestion);
+// useSuggestion.preventDefault();
+// 	if (useSuggestion.target.tagName === 'LI') {
+// 		input.value='';
+// 		input.value= useSuggestion;
