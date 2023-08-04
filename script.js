@@ -9,29 +9,40 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 	 const fruits = fruit.filter(food => food.toLowerCase().includes(str.toLowerCase()));
 		return fruits += results
 	};
-	return results;
+		return results; 
+	
 
 
-	// WHAT I'M DOING FOR searchHandler IS MAKING A LI SO I CAN APPEND THE FILTERED FRUIT ARRAY TO IT AND APPEND IT TO THE SUGGESTIONS UL 
+	// showSuggestions and search should be used in here
 function searchHandler(e) {
 	e.preventDeafult();
 	const fruitList = document.createElement('li');
-	const result = search(e.currentTarget.value);
-	fruitList.append(result);
-	suggestions.append(fruitList);
+	showSuggestions(results, )
+	// let result = search(e.currentTarget.value);
+	// fruitList.append(result);
+	// suggestions.append(fruitList);
 	
 };
 
 
 // loop through the results and for each suggestion append to suggestions ul and 'results' is the result of that fruit that I'm returning 
 function showSuggestions(results, inputVal) {
+const result = search(results.currentTarget.value);
+const inputVal = 
+
+
 
 };
 
 
 //  create a function that empty's out the suggestions field and use the event listener that listens for clicks to replace the input.value.
 function useSuggestion(e) {
-	// TODO
+	e.preventDeafult()
+	if (e.target.tagName === 'LI'){
+		input.value = '';
+		suggestions.style.display='none';
+		input.value = e.target;
+	}
 };
 
 input.addEventListener('keyup', searchHandler);

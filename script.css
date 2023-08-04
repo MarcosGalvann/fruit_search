@@ -11,11 +11,12 @@
   }
   
   input {
-   /* TODO */
+   /* position: relative ; */
   }
   
   .search-container {
-   /* TODO */
+   position: relative;
+   box-sizing: border-box;
   }
   .search-container input,
   .search-container .suggestions {
