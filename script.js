@@ -16,8 +16,9 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 	// showSuggestions and search should be used in here
 function searchHandler(e) {
 	e.preventDeafult();
-	const fruitList = document.createElement('li');
-	showSuggestions(results, )
+	// const fruitList = document.createElement('li');
+	showSuggestions(results, e.currentTarget.value);
+
 	// let result = search(e.currentTarget.value);
 	// fruitList.append(result);
 	// suggestions.append(fruitList);
@@ -27,11 +28,12 @@ function searchHandler(e) {
 
 // loop through the results and for each suggestion append to suggestions ul and 'results' is the result of that fruit that I'm returning 
 function showSuggestions(results, inputVal) {
-const result = search(results.currentTarget.value);
-const inputVal = 
-
-
-
+const results = search(...str);
+if (inputVal.includes(...results) === true ){
+	const fruitList = document.createElement('li');
+	fruitList.append(results);
+	suggestions.append(fruitList);
+};
 };
 
 
@@ -42,7 +44,7 @@ function useSuggestion(e) {
 		input.value = '';
 		suggestions.style.display='none';
 		input.value = e.target;
-	}
+	};
 };
 
 input.addEventListener('keyup', searchHandler);
