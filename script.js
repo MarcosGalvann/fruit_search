@@ -42,7 +42,7 @@ function useSuggestion(e) {
 	e.preventDeafult()
 	if (e.target.tagName === 'LI'){
 		input.value = '';
-		suggestions.style.display='none';
+		suggestions.style.position='static';
 		input.value = e.target;
 	};
 };
