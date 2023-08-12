@@ -11,10 +11,9 @@
   }
   
   input {
-    display: block;
-   margin-left: 30%;
-   margin-right: 30%;
-   margin-bottom: 30%;
+    
+    left: 30%;
+    margin-bottom: 30%;
   }
   
   .search-container {
@@ -45,5 +44,6 @@
   }
   
   input {
-     /* TODO */
+  
+    margin-bottom: 30%;
   }
