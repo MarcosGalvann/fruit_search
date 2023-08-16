@@ -7,7 +7,7 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
   function search(str) {
 	let results = [];
 	 const fruits = fruit.filter(food => food.toLowerCase().includes(str.toLowerCase()));
-		return fruits += results
+		return fruits += results;
 	};
 		return results; 
 	
@@ -15,25 +15,25 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 
 	// showSuggestions and search should be used in here
 function searchHandler(e) {
-	e.preventDeafult();
-	// const fruitList = document.createElement('li');
+	e.preventDeafult(); 
 	showSuggestions(results, e.currentTarget.value);
-
-	// let result = search(e.currentTarget.value);
-	// fruitList.append(result);
-	// suggestions.append(fruitList);
-	
 };
 
 
 // loop through the results and for each suggestion append to suggestions ul and 'results' is the result of that fruit that I'm returning 
 function showSuggestions(results, inputVal) {
 const results = search(...str);
-if (inputVal.includes(...results) === true ){
-	const fruitList = document.createElement('li');
-	fruitList.append(results);
-	suggestions.append(fruitList);
+const fruitList = document.createElement('li');
+for(let result of results){
+	if(inputVal.includes(result) === true){
+		fruitList.append(result);
+		suggestions.append(fruitList);
+	};
 };
+// if (inputVal.includes(...results) === true )
+// 	fruitList.append(results);
+// 	suggestions.append(fruitList);
+// };
 };
 
 
