@@ -4,46 +4,67 @@
   
   :focus {
    /* TODO */
+   outline: none;
   }
   
   body {
-    /* TODO */
+    background: linear-gradient(to right,#ff7b00, #FFFF00);
   }
   
   input {
-    
+   padding: 6px;
+   width: 300px;
+   /* position: relative; */
   }
   
   .search-container {
-   /* position: relative; */
-   margin-left: 30%;
-   margin-bottom: 30%;
+  height: 100%;
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  /* margin: auto;
+  width: 50%; */
+   
   }
 
   .search-container input,
   .search-container .suggestions {
-    /* TODO */
+
+    /* align-items: center; */
+    
   }
 
   .search-container input {
-    position: relative;
+   background: linear-gradient(to left,#FFA500, #FFFF00);
+   
   }
 
   .search-container .suggestions {
     position: absolute;
+    top: 20px;
   }
 
   ul {
-    /* TODO */
+   list-style-type: none;
+   
   }
   ul.has-suggestions {
-    /* TODO */
+    /* This is the class list youre supposed to add to make bold the text to macth the input value and results */
+    font-weight: bold;
+  
   }
   ul li {
-    /* TODO */
+  border: 1px solid ;
+  padding: 6px;
+  width: 300px;
+  /* margin-right: 40px ; */
+   
+    
+    
   }
   ul li:hover {
-    background-color: orange;
+    background-color: rgba(165, 130, 55, 0.904);
   }
   
   input {
